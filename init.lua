@@ -168,10 +168,14 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagn
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- vim cmake keymaps
-vim.keymap.set('n', '<F5>', '<Esc>:CMakeGenerate<Enter>')
-vim.keymap.set('n', '<F6>', '<Esc>:CMakeBuild<Enter>')
+vim.keymap.set('n', '<leader>cmg', '<Esc>:CMakeGenerate<Enter>', { desc = 'Generating the CMake Project' })
+vim.keymap.set('n', '<leader>cmb', '<Esc>:CMakeBuild<Enter>', { desc = 'Building the CMake Project' })
 vim.keymap.set('n', '<F7>', '<Esc>:CMakeClose<Enter>')
 vim.keymap.set('n', '<F8>', '<Esc>:CMakeClean<Enter>')
+
+--saving and exiting keymaps
+vim.keymap.set({ 'n', 'i' }, '<F1>', '<ESC>:w<Enter>', { desc = 'saving the file' })
+vim.keymap.set({ 'n', 'i' }, '<F2>', '<ESC>:wq<Enter>', { desc = 'saving and exiting the file' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which

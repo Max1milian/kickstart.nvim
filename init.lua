@@ -176,6 +176,9 @@ vim.keymap.set('n', '<F8>', '<Esc>:CMakeClean<Enter>')
 --saving and exiting keymaps
 vim.keymap.set({ 'n', 'i' }, '<F1>', '<ESC>:w<Enter>', { desc = 'saving the file' })
 vim.keymap.set({ 'n', 'i' }, '<F2>', '<ESC>:wq<Enter>', { desc = 'saving and exiting the file' })
+vim.keymap.set({ 'n', 'i' }, '<F3>', '<ESC>:q!<Enter>', { desc = 'saving and exiting the file' })
+
+vim.keymap.set({ 'n', 'i' }, '<C-n>', '<ESC>:Neotree<Enter>', { desc = 'saving and exiting the file' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -859,7 +862,7 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

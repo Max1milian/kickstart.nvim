@@ -91,7 +91,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -168,8 +168,8 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagn
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- vim cmake keymaps
-vim.keymap.set('n', '<leader>cmg', '<Esc>:CMakeGenerate<Enter>', { desc = 'Generating the CMake Project' })
-vim.keymap.set('n', '<leader>cmb', '<Esc>:CMakeBuild<Enter>', { desc = 'Building the CMake Project' })
+vim.keymap.set('n', '<F5>', '<Esc>:CMakeGenerate<Enter>', { desc = 'Generating the CMake Project' })
+vim.keymap.set('n', '<F6>', '<Esc>:CMakeBuild<Enter>', { desc = 'Building the CMake Project' })
 vim.keymap.set('n', '<F7>', '<Esc>:CMakeClose<Enter>')
 vim.keymap.set('n', '<F8>', '<Esc>:CMakeClean<Enter>')
 

@@ -167,18 +167,17 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- vim cmake keymaps
-vim.keymap.set('n', '<F5>', '<Esc>:CMakeGenerate<Enter>', { desc = 'Generating the CMake Project' })
-vim.keymap.set('n', '<F6>', '<Esc>:CMakeBuild<Enter>', { desc = 'Building the CMake Project' })
-vim.keymap.set('n', '<F7>', '<Esc>:CMakeClose<Enter>')
-vim.keymap.set('n', '<F8>', '<Esc>:CMakeClean<Enter>')
-
 --saving and exiting keymaps
 vim.keymap.set({ 'n', 'i' }, '<F1>', '<ESC>:w<Enter>', { desc = 'saving the file' })
 vim.keymap.set({ 'n', 'i' }, '<F2>', '<ESC>:wq<Enter>', { desc = 'saving and exiting the file' })
 vim.keymap.set({ 'n', 'i' }, '<F3>', '<ESC>:q!<Enter>', { desc = 'saving and exiting the file' })
 
-vim.keymap.set({ 'n', 'i' }, '<C-n>', '<ESC>:Neotree<Enter>', { desc = 'saving and exiting the file' })
+vim.keymap.set({ 'n', 'i' }, '<C-n>', '<ESC>:Neotree<Enter>', { desc = 'opening Neotree' })
+
+-- cmake keymaps
+vim.keymap.set({ 'n', 'i' }, '<F5>', '<Esc>:!cmake -S . -B build<Enter>', { desc = 'creating the CMake Project' })
+vim.keymap.set({ 'n', 'i' }, '<F6>', '<Esc>:!cmake --build build<Enter>', { desc = 'building the CMake Project' })
+vim.keymap.set({ 'n', 'i' }, '<F7>', '<Esc>:!rm -rf build<Enter>', { desc = 'deleting the CMake Project' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -240,7 +239,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  'cdelledonne/vim-cmake',
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following

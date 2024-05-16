@@ -170,12 +170,12 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 --saving and exiting keymaps
 vim.keymap.set({ 'n', 'i' }, '<F1>', '<ESC>:w<Enter>', { desc = 'saving the file' })
 vim.keymap.set({ 'n', 'i' }, '<F2>', '<ESC>:wq<Enter>', { desc = 'saving and exiting the file' })
-vim.keymap.set({ 'n', 'i' }, '<F3>', '<ESC>:q!<Enter>', { desc = 'saving and exiting the file' })
+vim.keymap.set({ 'n', 'i' }, '<F3>', '<ESC>:q!<Enter>', { desc = 'exiting the file and discarding changes' })
 
 vim.keymap.set({ 'n', 'i' }, '<C-n>', '<ESC>:Neotree<Enter>', { desc = 'opening Neotree' })
 
 -- cmake keymaps
-vim.keymap.set({ 'n', 'i' }, '<F5>', '<Esc>:!cmake -S . -B build<Enter>', { desc = 'creating the CMake Project' })
+vim.keymap.set({ 'n', 'i' }, '<F5>', '<Esc>:!cmake -S . -B build<Enter> -D CMAKE_EXPORT_COMPILE_COMMANDS=ON', { desc = 'creating the CMake Project' })
 vim.keymap.set({ 'n', 'i' }, '<F6>', '<Esc>:!cmake --build build<Enter>', { desc = 'building the CMake Project' })
 vim.keymap.set({ 'n', 'i' }, '<F7>', '<Esc>:!rm -rf build<Enter>', { desc = 'deleting the CMake Project' })
 
@@ -188,10 +188,10 @@ vim.keymap.set({ 'n', 'i' }, '<F7>', '<Esc>:!rm -rf build<Enter>', { desc = 'del
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows

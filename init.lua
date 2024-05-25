@@ -175,7 +175,7 @@ vim.keymap.set({ 'n', 'i' }, '<F3>', '<ESC>:q!<Enter>', { desc = 'exiting the fi
 vim.keymap.set({ 'n', 'i' }, '<C-n>', '<ESC>:Neotree<Enter>', { desc = 'opening Neotree' })
 
 -- cmake keymaps
-vim.keymap.set({ 'n', 'i' }, '<F5>', '<Esc>:!cmake -S . -B build<Enter> -D CMAKE_EXPORT_COMPILE_COMMANDS=ON', { desc = 'creating the CMake Project' })
+vim.keymap.set({ 'n', 'i' }, '<F5>', '<Esc>:!cmake -S . -B build<Enter>', { desc = 'creating the CMake Project' })
 vim.keymap.set({ 'n', 'i' }, '<F6>', '<Esc>:!cmake --build build<Enter>', { desc = 'building the CMake Project' })
 vim.keymap.set({ 'n', 'i' }, '<F7>', '<Esc>:!rm -rf build<Enter>', { desc = 'deleting the CMake Project' })
 

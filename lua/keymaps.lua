@@ -37,9 +37,9 @@ vim.keymap.set({ 'n', 'i', 'v' }, '<F2>', '<ESC>:wq<Enter>', { desc = 'saving fi
 vim.keymap.set({ 'n', 'i', 'v' }, '<F3>', '<ESC>:qa!<Enter>', { desc = 'exiting without saving' })
 
 --cmake commands to create and build projects
-vim.keymap.set('n', '<F6>', '!cmake -S . -B build<Enter>', { desc = 'creating the project' })
-vim.keymap.set('n', '<F7>', '!cmake --build build --parallel 16<Enter>', { desc = 'building the CMake project' })
-vim.keymap.set('n', '<F8>', '!rm -rf build<Enter>', { desc = 'deleting the build project' })
+vim.keymap.set({ 'n', 'i', 'v' }, '<F6>', '<ESC>:!cmake -S . -B build<Enter>', { desc = 'creating the project' })
+vim.keymap.set({ 'n', 'i', 'v' }, '<F7>', '<ESC>:!cmake --build build --parallel 16<Enter>', { desc = 'building the CMake project' })
+vim.keymap.set({ 'n', 'i', 'v' }, '<F8>', '<ESC>:!rm -rf build<Enter>', { desc = 'deleting the build project' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

@@ -31,9 +31,15 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Function keys to save and edit files
 vim.keymap.set({ 'n', 'i', 'v' }, '<F1>', '<ESC>:w<Enter>', { desc = 'saving file' })
 vim.keymap.set({ 'n', 'i', 'v' }, '<F2>', '<ESC>:wq<Enter>', { desc = 'saving file and exiting file' })
 vim.keymap.set({ 'n', 'i', 'v' }, '<F3>', '<ESC>:qa!<Enter>', { desc = 'exiting without saving' })
+
+--cmake commands to create and build projects
+vim.keymap.set('n', '<F6>', '!cmake -S . -B build<Enter>', { desc = 'creating the project' })
+vim.keymap.set('n', '<F7>', '!cmake --build build --parallel 16<Enter>', { desc = 'building the CMake project' })
+vim.keymap.set('n', '<F8>', '!rm -rf build<Enter>', { desc = 'deleting the build project' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

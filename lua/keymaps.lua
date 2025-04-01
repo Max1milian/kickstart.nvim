@@ -34,7 +34,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Function keys to save and edit files
 vim.keymap.set({ 'n', 'i', 'v' }, '<F1>', '<ESC>:w<Enter>', { desc = 'saving file' })
 vim.keymap.set({ 'n', 'i', 'v' }, '<F2>', '<ESC>:wq<Enter>', { desc = 'saving file and exiting file' })
-vim.keymap.set({ 'n', 'i', 'v' }, '<F3>', '<ESC>:qa!<Enter>', { desc = 'exiting without saving' })
+vim.keymap.set({ 'n', 'i', 'v' }, '<F3>', '<ESC>:qa!<Enter>', { desc = 'exiting all windows without saving' })
+vim.keymap.set({ 'n', 'i', 'v' }, '<F4>', '<ESC>:q!<Enter>', { desc = 'exiting without saving' })
 
 --cmake commands to create and build projects
 vim.keymap.set({ 'n', 'i', 'v' }, '<F6>', '<ESC>:vsplit | term cmake -S . -B build<Enter><S-G>', { desc = 'creating the project' })

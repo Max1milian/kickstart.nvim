@@ -38,7 +38,7 @@ vim.keymap.set({ 'n', 'i', 'v' }, '<F3>', '<ESC>:qa!<Enter>', { desc = 'exiting 
 vim.keymap.set({ 'n', 'i', 'v' }, '<F4>', '<ESC>:q!<Enter>', { desc = 'exiting without saving' })
 
 --cmake commands to create and build projects
-vim.keymap.set({ 'n', 'i', 'v' }, '<F6>', '<ESC>:vsplit | term cmake -S . -B build<Enter><S-G>', { desc = 'creating the project' })
+vim.keymap.set({ 'n', 'i', 'v' }, '<F6>', '<ESC>:vsplit | term cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug<Enter><S-G>', { desc = 'creating the project' })
 vim.keymap.set({ 'n', 'i', 'v' }, '<F7>', '<ESC>:vsplit | term cmake --build build --parallel 16<Enter><S-G>', { desc = 'building the CMake project' })
 vim.keymap.set({ 'n', 'i', 'v' }, '<F8>', '<ESC>:vsplit | term rm -rf build<Enter><S-G>', { desc = 'deleting the build project' })
 

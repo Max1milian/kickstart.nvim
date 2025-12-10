@@ -27,6 +27,7 @@ return {
       --   ruby = { "ruby" },
       --   terraform = { "tflint" },
       --   text = { "vale" }
+      cpp = { 'cpplint' }
       -- }
       --
       -- You can disable the default linters by setting their filetypes to nil:

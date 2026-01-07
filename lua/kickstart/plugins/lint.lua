@@ -7,6 +7,8 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        cpp = { 'cpplint' },
+        ruby = { 'ruby' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
@@ -27,7 +29,7 @@ return {
       --   ruby = { "ruby" },
       --   terraform = { "tflint" },
       --   text = { "vale" }
-      cpp = { 'cpplint' }
+      --   cpp = { 'cpplint' }
       -- }
       --
       -- You can disable the default linters by setting their filetypes to nil:

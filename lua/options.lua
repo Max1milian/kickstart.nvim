@@ -72,3 +72,9 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 -- vim: ts=2 sts=2 sw=2 et
+
+--converting tabs into spaces
+vim.opt.expandtab = true -- Convert tabs to spaces
+vim.opt.tabstop = 4 -- Number of spaces a tab counts for
+vim.opt.shiftwidth = 4 -- Number of spaces for indentation
+vim.opt.softtabstop = 4 -- Makes editing feel like you're using tabs, but with spaces
